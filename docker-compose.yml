@@ -1,0 +1,9 @@
+version: '2'
+services:
+    ssserver:
+        image: mark86092/shadowsocks
+        restart: always
+        network_mode: host
+        command: "-s 0.0.0.0 -p 1314 -k YOUR_PASSWORD -m aes-256-cfb"
+        ports:
+            - 1314:1314
